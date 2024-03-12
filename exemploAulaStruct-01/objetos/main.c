@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-struct Pessoa{
+struct Pessoa {
    char nome[50];
    int idade;
 };
@@ -36,7 +36,7 @@ int main(void) {
    {
       grupo[i] = receberDados();
    }
-   
+
    for (int i = 0; i < 5; i++)
    {
       mostrarDados(grupo[i]);
