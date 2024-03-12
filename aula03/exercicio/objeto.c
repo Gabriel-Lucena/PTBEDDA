@@ -63,12 +63,12 @@ int maiorNota(struct Aluno alunos[5])
 
 double media(struct Aluno aluno)
 {
-   return 1 / 3 * (aluno.nota1 + aluno.nota2 + aluno.nota3);
+   return (aluno.nota1 + aluno.nota2 + aluno.nota3) / 3.0;
 }
 
 int maiorMedia(struct Aluno alunos[5])
 {
-   int maiorMedia = media(alunos[0]);
+   double maiorMedia = media(alunos[0]);
 
    int indice = 0;
 
@@ -86,7 +86,7 @@ int maiorMedia(struct Aluno alunos[5])
 
 int menorMedia(struct Aluno alunos[5])
 {
-   int menorMedia = media(alunos[0]);
+   double menorMedia = media(alunos[0]);
 
    int indice = 0;
 
@@ -109,12 +109,12 @@ void resultadoFinal(struct Aluno alunos[5])
    {
       if (media(alunos[i]) >= 6)
       {
-         printf("O aluno de matrícula %d e nome %s está aprovado", alunos[i].numeroMatricula, alunos[i].nome);
+         printf("O aluno de matrícula %d e nome %s está aprovado\n", alunos[i].numeroMatricula, alunos[i].nome);
       }
 
       if (media(alunos[i]) < 6)
       {
-         printf("O aluno de matrícula %d e nome %s está reprovado", alunos[i].numeroMatricula, alunos[i].nome);
+         printf("O aluno de matrícula %d e nome %s está reprovado\n", alunos[i].numeroMatricula, alunos[i].nome);
       }
    }
 }
