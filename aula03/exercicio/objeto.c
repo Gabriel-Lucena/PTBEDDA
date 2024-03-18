@@ -17,7 +17,7 @@ struct Aluno receberDados()
    scanf("%d", &aluno.numeroMatricula);
 
    printf("Digite o nome do aluno: \n");
-   scanf("%s", &aluno.nome);
+   scanf("%s", aluno.nome);
 
    printf("Digite a nota 1 do aluno: \n");
    scanf("%lf", &aluno.nota1);
@@ -104,6 +104,7 @@ int menorMedia(struct Aluno alunos[5])
 
 void resultadoFinal(struct Aluno alunos[5])
 {
+   printf("\n");
 
    for (int i = 0; i < 5; i++)
    {
@@ -116,6 +117,8 @@ void resultadoFinal(struct Aluno alunos[5])
       {
          printf("O aluno de matrícula %d e nome %s está reprovado\n", alunos[i].numeroMatricula, alunos[i].nome);
       }
+
+      printf("\n");
    }
 }
 
