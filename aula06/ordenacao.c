@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 void bubbleSort(int vetor[], int tamanho)
 {
@@ -48,6 +49,24 @@ int binarySearch(int vetor[], int tamanho, int chave)
   return -1;
 }
 
+int linearSearch(int vetor[], int tamanho, int chave) {
+
+  int left = 0;
+  int right = tamanho - 1;
+
+  while (left <= right) {
+    if (chave != vetor[left]) {
+      left++;
+    }
+
+    if (chave == vetor[left]) {
+      return left;
+    }
+  }
+
+  return -1;
+}
+
 int main(void)
 {
 
@@ -71,8 +90,11 @@ int main(void)
 
   printf("\n\n");
 
-  printf("%d\n", binarySearch(vetor, 8, 30));
-  printf("%d", binarySearch(vetor, 8, 100));
+//  printf("%d\n", binarySearch(vetor, 8, 30));
+//  printf("%d", binarySearch(vetor, 8, 100));
+
+  printf("%d\n", linearSearch(vetor, 8, 30));
+  printf("%d\n", linearSearch(vetor, 8, 100));
 
   return 0;
 }
