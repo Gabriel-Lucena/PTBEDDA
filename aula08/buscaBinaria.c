@@ -23,7 +23,7 @@ int buscaBinaria(int a[], int inicio, int fim, int x) {
 int main(void) {
     int a[] = {0, 1, 2, 3, 4, 5, 6, 7};
 
-    printf("%d", buscaBinaria(a, 6, -1));
+    printf("%d", buscaBinaria(a, 0, 7, 7));
 
     return 0;
 }
